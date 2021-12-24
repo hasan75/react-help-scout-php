@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./Navbar.css";
 import DropdownItem from "components/DropdownItem/DropdownItem";
 
@@ -16,12 +16,8 @@ import { ReactComponent as Hamburger } from "assets/images/hamburger.svg";
 import { ReactComponent as CrossIcon } from "assets/images/cross-icon.svg";
 import { Link } from "react-router-dom";
 import Logo from "components/Logo/Logo";
-import {UserContext} from "../../contexts/UserContext";
 
 function Navbar() {
-  const { rootState, logoutUser} = useContext(UserContext);
-  const {isAuth, theUser, showLogin} = rootState;
-
   const [show, setShow] = React.useState(false);
 
   React.useEffect(() => {
@@ -152,28 +148,13 @@ function Navbar() {
                     />
                   </DropdownWrapper>
                 </div>
-                <div className="navbar-link light-blue graphik-regular fs-15px pointer dropdown-icon ">
-                  Resources
-                  <DropdownWrapper className="navbar-dropdown flex-col  w-255px">
-                    <DropdownItem
-                      title="Success Stories"
-                      subtitle="See how other teams use Help Scout"
-                    />
-                    <DropdownItem
-                      title="Attend a Live Class"
-                      subtitle="Help Scout tips, best practices, and Q&A"
-                    />
-                    <DropdownItem
-                      title="Help Center"
-                      subtitle="How-to articles about using Help Scout"
-                    />
-                    <DropdownItem
-                      title="Contact Us"
-                      subtitle="Get in touch with our team"
-                    />
-                  </DropdownWrapper>
-                </div>
-                <div className="navbar-link light-blue graphik-regular fs-15px pointer ">
+                <Link
+                  to="/pricing"
+                  className="navbar-link light-blue graphik-regular fs-15px pointer anchor-items"
+                >
+                  Pricing
+                </Link>
+                <div className="navbar-link light-blue graphik-regular fs-15px pointer anchor-items">
                   Blog
                 </div>
                 <div className="navbar-link light-blue graphik-regular fs-15px pointer ">
@@ -181,37 +162,25 @@ function Navbar() {
                 </div>
                 <Link
                   to="/pricing"
-                  className="navbar-link light-blue graphik-regular fs-15px pointer "
+                  className="navbar-link light-blue graphik-regular fs-15px pointer anchor-items"
                 >
-                  Pricing
+                  Career
                 </Link>
               </div>
 
               <div className="navbar-btns">
-                {isAuth ? (
-                  <>
-                    <h1 className="light-blue graphik-regular fs-15px pointer" >{theUser.first_name}</h1>
-                    <button className="light-blue graphik-regular fs-15px pointer"
-                    onClick={logoutUser}>Log Out</button>
-                  </>
-                  
-                  ) : (
-                    <>
-                    <Link
-                    to="/login"
-                    className="light-blue graphik-regular fs-15px pointer "
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    to="/register"
-                    className="button-wrapper radius-4px bg-sharp-blue white graphik-regular weight-5"
-                  >
-                    Free Trial
-                  </Link>
-                  </>
-                  )
-                }
+                <Link
+                  to="/login"
+                  className="light-blue graphik-regular fs-15px pointer anchor-items"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="button-wrapper radius-4px bg-sharp-blue white graphik-regular weight-5 anchor-items"
+                >
+                  Free Trial
+                </Link>
               </div>
             </div>
           </div>

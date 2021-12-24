@@ -6,7 +6,20 @@
   justify-content: space-between;
   margin-bottom: clamp(60px, 6.25vw, 90px);
 }
-
+.bg-grad-color {
+  background-color: #dce9f8;
+}
+.ancor-deco {
+  text-decoration: none;
+}
+.with-bg-img {
+  font-size: 30px;
+  font-weight: 700;
+  height: 270px;
+  background-image: url('../../assets/images/longbg.png');
+  background-repeat: cover;
+  background-size: 100% 100%;
+}
 .section-left {
   flex: 1;
   max-width: 505px;
@@ -110,7 +123,7 @@
   background-position: center center;
   background-size: 100%;
 
-  content: "";
+  content: '';
   width: 75px;
   height: 111px;
 
@@ -121,7 +134,7 @@
   background-position: center center;
   background-size: 100%;
 
-  content: "";
+  content: '';
   width: 75px;
   height: 111px;
 
@@ -146,7 +159,7 @@
   z-index: 4;
 }
 .help-scout-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0px;
   left: 0px;
@@ -159,7 +172,7 @@
 }
 
 .help-scout-wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0px;
   left: 0px;

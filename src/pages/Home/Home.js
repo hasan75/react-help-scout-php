@@ -1,50 +1,44 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./Home.css";
 import Navbar from "layouts/Navbar/Navbar";
-import badgesImg from "assets/images/badges-img.webp";
-import LinkBtn from "components/LinkBtn/LinkBtn";
-import company1 from "assets/images/company-1.webp";
-import company2 from "assets/images/company-2.webp";
-import company3 from "assets/images/company-3.webp";
-import company4 from "assets/images/company-4.webp";
-import company5 from "assets/images/company-5.webp";
-import company6 from "assets/images/company-6.webp";
-import SideBySideSection from "components/SideBySideSection/SideBySideSection";
-import platformImg from "assets/images/platform-img.webp";
-import integrationImg from "assets/images/integration-img.webp";
-import resourcesImg1 from "assets/images/resources-img-1.webp";
-import resourcesImg2 from "assets/images/resources-img-2.webp";
-import resourcesImg3 from "assets/images/resources-img-3.webp";
-import resourcesImg4 from "assets/images/resources-img-4.webp";
-import ResourcesCard from "components/ResourcesCard/ResourcesCard";
+import { ReactComponent as GoogleIcon } from "assets/images/google-icon.svg";
+import freestart from "assets/images/freestart.svg"
+import makesmart from "assets/images/makesmart.svg"
 
-import liveChatImg from "assets/images/live-chat.webp";
-import inboxImg from "assets/images/inbox.webp";
-import helpCenterImg from "assets/images/help-center.webp";
-import heartImg from "assets/images/heart.webp";
 
-import papersImg from "assets/images/papers.webp";
-import hammerImg from "assets/images/hammer.webp";
-import analyticsImg from "assets/images/analytics.webp";
-import puzzelImg from "assets/images/puzzel.webp";
+import chromeSvg from "assets/images/chromeextension.svg";
+import chrome from "assets/images/chrome.png";
+import analyzeSvg from "assets/images/analyze.svg"
+import analyze from "assets/images/analyze.png"
+import engageSvg from "assets/images/engage.svg"
+import engage from "assets/images/workflow.png"
 
-import ringLogo from "assets/images/ring-logo.webp";
 
-import SupportCard from "components/SupportCard/SupportCard";
-import ToolTip from "components/ToolTip/ToolTip";
+
+import firstimg from 'assets/images/first.png'
+import target from "assets/images/target.svg"
 import Footer from "layouts/Footer/Footer";
+import { Row, Col, Container } from "react-bootstrap";
+import searchicon from "assets/images/searcher-icon.svg";
+import searchImg from "assets/images/search.png";
+import crm from "assets/images/crm.png"
+import crmlogo from "assets/images/crmlogo.svg"
+import trust from "assets/images/trust.png"
+import leader1 from "assets/images/leader1.png"
+import leader2 from "assets/images/leader2.png"
 
 function App() {
   return (
     <div className="App">
       <Navbar />
 
-      <div className="pt-90px">
+      <div className="">
         <div className="container-wrapper">
           <div className="section">
             <div className="section-left">
+              <h5 className="mb-1">The sales intelligence and engagement platform to </h5>
               <p className="fs-48px graphik-semibold darkest-blue mb-20px">
-                Customer support for growing businesses
+                Crush Your Sales numbers every quarter
               </p>
               <p className="fs-21px darkest-blue lh-2 mb-35px">
                 Simple to start, powerful to grow, and proven to build better
@@ -57,246 +51,187 @@ function App() {
                   Try for free
                 </button>
               </div>
+              <p className="text-center">Or</p>
+              <button className="button-wrapper bg-secondary white fs-18px graphik-medium radius-4px pointer w-100">
+                <GoogleIcon/>  Sign Up with Google
+              </button>
+              <div>
 
-              <div className="hero-badges">
-                <div className="hero-badges-left">
-                  <img src={badgesImg} alt="" />
-                </div>
-                <div className="hero-badges-right">
-                  <p className="darkest-blue fs-15px graphik-medium">
-                    Larger team?
-                  </p>
-                  <LinkBtn title="Get A Demo" />
-                </div>
               </div>
             </div>
             <div className="section-right">
-              <video
-                autoplay=""
-                height="auto"
-                className="hero-video"
-                loop=""
-                muted=""
-                playsinline=""
-                poster="https://hs-marketing.imgix.net/images/videos/video--share-email.png?auto=compress&amp;fit=scale&amp;dpr=1"
-                preload="auto"
-                width="100%"
-              >
-                <source
-                  src="/static/video--share-email-5d8c14f7960c2e52c5febacf0bb4bb2e.webm"
-                  type="video/webm"
-                ></source>
-              </video>
+              <img className="img-fluid" src={firstimg} width="100%"alt="" />
             </div>
           </div>
         </div>
       </div>
-      <div className="container-wrapper">
-        <div className="companies">
-          <p className="text-center fs-24px dark-blue mb-40px">
-            Trusted by more than 12,000 businesses in 140 countries.
-          </p>
-
-          <div className="companies-images">
-            <img src={company1} alt="" />
-            <img src={company2} alt="" />
-            <img src={company3} alt="" />
-            <img src={company4} alt="" />
-            <img src={company5} alt="" />
-            <img src={company6} alt="" />
-          </div>
-        </div>
+      <div className="p-3 bg-grad-color">
+        <Row>
+          <Col sm="6" md="4" className="with-bg-img p-3 d-flex justify-content-center align-items-center ps-3">
+            Trusted by Over 1M sales users worldwide.
+          </Col>
+          <Col sm="6" md="8" className="ps-4 align-self-center">
+            <Row className="ps-3 d-flex justify-content-around align-self-center">
+              <Col className="p-3">
+                <h2>200M+</h2>
+                <p className="fs-bold text-primary">Contacts</p>
+              </Col>
+              <Col className="p-3">
+                <h2>200M+</h2>
+                <p className="fs-bold text-primary">Companies</p>
+              </Col>
+              <Col className="p-3">
+                <h2>200M+</h2>
+                <p className="fs-bold text-primary">Mobile Numbers</p>
+              </Col>
+              <Col className="p-3">
+                <h2>200M+</h2>
+                <p className="fs-bold text-primary">Paying Customers</p>
+              </Col>
+                
+            </Row>
+            
+          </Col>
+        </Row>
+        
+      </div>
+      <div className="py-5">
+        <Row className="ps-2 p-2 bg-gradient-light ">
+        <Col lg="4" className="d-flex flex-column justify-content-center align-items-center">
+          <img src={target} height="112px" width="112px" alt="" className="pb-2" />
+          <h2>Target with laser precision</h2>
+          <p>200 filter attributes to personalize your engagement</p>
+          <p>Refreshed more frequently than other vendors</p>
+        </Col>
+        <Col lg="4" className="d-flex flex-column justify-content-center align-items-center">
+        <img src={freestart} height="112px" width="112px" alt="" className="pb-2" />
+          <h2>Free to start</h2>
+          <p>100% free starter plan, free trial for advanced plans</p>
+          <p>Used by over 1M sales professionals.</p>
+        </Col>
+        <Col lg="4" className="d-flex flex-column justify-content-center align-items-center p-2">
+        <img src={makesmart} height="112px" width="112px" alt="" className="pb-2" />
+          <h2 className="">Make smart GTM simple</h2>
+          <p>Get started engaging with your prospects in minutes</p>
+          <p>One platform to find customers</p>
+        </Col>
+      </Row>
       </div>
 
-      <div className="container-wrapper">
-        <p className="cards-title fs-36px text-center graphik-medium darkest-blue">
-          What you can do with Help Scout
-        </p>
-      </div>
-      <SideBySideSection
-        headline="Platform"
-        title="Every support tool you need, out of the box"
-        subtitle="With features like shared email, live chat, knowledge base, reports, and much more, Help Scout gives growing companies the flexibility and visibility to support customers at scale."
-        linkTitle="How it works"
-        identity={true}
-        img={platformImg}
-      />
-      <SideBySideSection
-        headline="Integrations"
-        title="Connect the tools you already use"
-        subtitle="Explore 50+ integrations that make your day-to-day workflow more efficient and familiar. Our extensive developer tools might also strike your fancy"
-        linkTitle="See all Integrations"
-        img={integrationImg}
-      />
-
-      <div className="support-wrapper">
-        <div className="container-wrapper">
-          <div className="support-titles ">
-            <p className="text-center fs-36px graphik-medium darkest-blue mb-25px">
-              A complete support solution
-            </p>
-            <p className="fs-18px light-blue text-center lh-2 graphik-regular ">
-              Email, self-service, live chat, and proactive support, customer
-              data, 50+ integrations, and customizable reports — Help Scout
-              comes with everything you need to deliver a great customer
-              experience.
-            </p>
-          </div>
-        </div>
-
-        <div className="product-overview">
-          <div className="canvas-wrapper">
-            <div className="canvas">
-              <div className="ring ring-outer-1"></div>
-              <div className="ring ring-outer-2"></div>
-              <div class="ring inner-ring-1"></div>
-              <div class="ring inner-ring-2"></div>
-              <div class="ring inner-ring-3"></div>
-
-              <SupportCard
-                tooltipTo="top"
-                img={liveChatImg}
-                className="live-chat bg-ring-green"
-              >
-                Live <br /> Chat
-              </SupportCard>
-              <SupportCard
-                tooltipTo="bottom"
-                img={inboxImg}
-                className="bg-ring-pink shared-inbox"
-              >
-                SHARED
-                <br /> INBOX
-              </SupportCard>
-              <SupportCard
-                tooltipTo="bottom"
-                img={helpCenterImg}
-                className="bg-ring-blue help-center"
-              >
-                HELP
-                <br />
-                CENTER
-              </SupportCard>
-              <SupportCard
-                tooltipTo="top"
-                img={heartImg}
-                className="proactive bg-ring-purple"
-              >
-                PROACTIVE <br /> MESSAGES
-              </SupportCard>
-
-              <div className="customer-data">
-                <ToolTip to="top">
-                  <div className="ring-inner-content ">
-                    <img src={papersImg} className="mb-15px" alt="" />
-                    <p className="uppercase fs-10px light-blue text-center graphik-medium lh-2">
-                      CUSTOMER
-                      <br />
-                      DATA
-                    </p>
-                  </div>
-                </ToolTip>
-              </div>
-
-              <div className="tools">
-                <ToolTip to="top">
-                  <div className="ring-inner-content ">
-                    <img src={hammerImg} className="mb-15px" alt="" />
-                    <p className="uppercase fs-10px light-blue text-center graphik-medium lh-2">
-                      COLLABORATION
-                      <br />
-                      TOOLS
-                    </p>
-                  </div>
-                </ToolTip>
-              </div>
-              <div className="report">
-                <ToolTip to="top">
-                  <div className="ring-inner-content">
-                    <img src={analyticsImg} className="mb-15px" alt="" />
-                    <p className="uppercase fs-10px light-blue text-center graphik-medium lh-2">
-                      REPORTING
-                    </p>
-                  </div>
-                </ToolTip>
-              </div>
-              <div className="integration">
-                <ToolTip to="top">
-                  <div className="ring-inner-content  ">
-                    <img src={puzzelImg} className="mb-15px" alt="" />
-                    <p className="uppercase fs-10px light-blue text-center graphik-medium lh-2">
-                      INTEGRATIONS
-                    </p>
-                  </div>
-                </ToolTip>
-              </div>
-              <div className="ring-logo">
-                <img src={ringLogo} alt="" />
-              </div>
+      <div className="ps-4 pt-5">
+        <Row className="d-flex justify-content-center align-items-center">
+          <Col lg="6">
+            <div className="pb-2">
+              <img className="" src={searchicon} alt="" />
+              <span className="fs-bolder ps-2">Searcher</span>
             </div>
-          </div>
-        </div>
+            <h2>Find your ideal customer with laser precision</h2>
+            <ul>
+              <li>Build precise lists of contacts and companies using Apollo.io’s advanced filtering across 200+ customizable attributes.</li>
+              <li>Trust Apollo’s contributory network and algorithms to access the most accurate and up-to-data contact and company data.</li>
+            </ul>
+          </Col>
+          <Col lg="6">
+            <img className="img-fluid" src={searchImg} alt="" />
+          </Col>
+        </Row>
+      </div>
+      <div className="ps-4 pt-5">
+        <Row className="d-flex justify-content-center align-items-center">
+          <Col lg="6" sm={{ order: 2 }} md={{ order: 1 }}>
+            <img className="img-fluid" src={crm} alt="" />
+          </Col>
+          <Col lg="6" sm={{ order: 1 }} md={{ order: 2 }}>
+            <div className="pb-2">
+              <img className="" src={crmlogo} alt="" />
+              <span className="fs-bolder ps-2">Enrich & Cleanse</span>
+            </div>
+            <h2>Find your ideal customer with laser precision</h2>
+            <ul>
+              <li>Build precise lists of contacts and companies using Apollo.io’s advanced filtering across 200+ customizable attributes.</li>
+              <li>Trust Apollo’s contributory network and algorithms to access the most accurate and up-to-data contact and company data.</li>
+            </ul>
+          </Col>
+        </Row>
       </div>
 
-      <div
-        className="bg-content"
-        style={{ position: "relative", zIndex: "10" }}
-      >
-        <div className="resources-wrapper">
-          <div className="container-wrapper">
-            <div className="resources">
-              <p className="text-center fs-36px darkest-blue graphik-medium mb-20px">
-                Content and resources
-              </p>
-              <p className="text-center lh-2 fs-18px light-blue ">
-                Learn how to scale your customer support function while
-                maintaining high-quality support with <br /> these helpful
-                resources written by our team of customer champions
-              </p>
-
-              <div className="resources-cards">
-                <ResourcesCard
-                  img={resourcesImg1}
-                  headline="FREE GUIDE"
-                  title="Step by Step: How to Choose Your Perfect Help Desk"
-                />
-                <ResourcesCard
-                  img={resourcesImg2}
-                  headline="CUSTOMER STORY"
-                  title="How Brain.fm Achieved a 95% CSAT Score With Help Scout"
-                />
-                <ResourcesCard
-                  img={resourcesImg3}
-                  headline="FREE COURSE"
-                  title="Foundations of Great Service: 6-Part Email Series"
-                />
-                <ResourcesCard
-                  img={resourcesImg4}
-                  headline="SCALING SUPPORT"
-                  title="The Right Way to Scale Customer Support"
-                />
-              </div>
+      <div className="ps-4 pt-5">
+        <Row className="d-flex justify-content-center align-items-center">
+          <Col lg="6">
+            <div className="pb-2">
+              <img className="" src={analyzeSvg} alt="" />
+              <span className="fs-bolder ps-2">Analyze</span>
             </div>
-          </div>
-        </div>
-
-        <div className="help-scout-wrapper my-150px">
-          <div className="container-wrapper">
-            <div className="help-scout">
-              <p className="fs-30px mb-25px graphik-medium darkest-blue">
-                Get started with Help Scout
-              </p>
-              <p className="mb-30px light-blue lh-2 fs-18px">
-                Want to learn what Help Scout can do for you? See for yourself
-                with a free trial — we'll happily extend you if you need more
-                time.
-              </p>
-              <button className="button-wrapper fs-18px white bg-sharp-blue radius-4px pointer">
-                Try for free
-              </button>
+            <h2>Find your ideal customer with laser precision</h2>
+            <ul>
+              <li>Build precise lists of contacts and companies using Apollo.io’s advanced filtering across 200+ customizable attributes.</li>
+              <li>Trust Apollo’s contributory network and algorithms to access the most accurate and up-to-data contact and company data.</li>
+            </ul>
+          </Col>
+          <Col lg="6">
+            <img className="img-fluid" src={analyze} alt="" />
+          </Col>
+        </Row>
+      </div>
+      <div className="ps-4 pt-5">
+        <Row className="d-flex justify-content-center align-items-center">
+        <Col lg="6" sm={{ order: 2 }} md={{ order: 1 }}>
+            <img className="img-fluid" src={engage} alt="" />
+          </Col>
+          <Col lg="6" sm={{ order: 1 }} md={{ order: 2 }}>
+            <div className="pb-2">
+              <img className="" src={engageSvg} alt="" />
+              <span className="fs-bolder ps-2">Engage</span>
             </div>
-          </div>
-        </div>
+            <h2>Find your ideal customer with laser precision</h2>
+            <ul>
+              <li>Build precise lists of contacts and companies using Apollo.io’s advanced filtering across 200+ customizable attributes.</li>
+              <li>Trust Apollo’s contributory network and algorithms to access the most accurate and up-to-data contact and company data.</li>
+            </ul>
+          </Col>
+        </Row>
+      </div>
+      <div className="ps-4 pt-5">
+        <Row className="d-flex justify-content-center align-items-center">
+          <Col lg="6">
+            <div className="pb-2">
+              <img className="" src={chromeSvg} alt="" />
+              <span className="fs-bolder ps-2">Chrome Extension</span>
+            </div>
+            <h2>Find your ideal customer with laser precision</h2>
+            <ul>
+              <li>Build precise lists of contacts and companies using Apollo.io’s advanced filtering across 200+ customizable attributes.</li>
+              <li>Trust Apollo’s contributory network and algorithms to access the most accurate and up-to-data contact and company data.</li>
+            </ul>
+          </Col>
+          <Col lg="6">
+            <img className="img-fluid" src={chrome} alt="" />
+          </Col>
+        </Row>
+      </div>
+      <div className="px-3 py-5 bg-secondary">
+        <Row>
+          <Col sm="12" lg="6">
+            <h1 className="text-light">Trusted by over 1M sales professionals at one-person startups to Fortune 500 companies</h1>
+            <br />
+            <Row className="d-flex justify-content-center align-items-center pt-5">
+              <Col sm="4">
+              <img className=" img-fluid" height="145px" width="188px" src={leader1} alt="" />
+              </Col>
+              <Col sm="4">
+              <img className=" img-fluid" height="145px" width="188px" src={leader2} alt="" />
+              </Col>
+              <Col sm="4">
+              <p className="fs-bold text-warning">Leader in Sales Intelligence Lead Intelligence Marketing Account Intelligence Sales Engagement</p>
+              </Col>
+
+            </Row>
+          </Col>
+          <Col sm="12" lg="6">
+            <img className="img-fluid" src={trust} alt="" />
+          </Col>
+
+        </Row>
       </div>
 
       <Footer />
