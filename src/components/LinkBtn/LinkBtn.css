@@ -1,0 +1,31 @@
+.link-btn {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  color: rgb(0, 119, 204);
+  font-weight: 500;
+}
+
+.link-btn::after {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  content: "";
+  display: inline-block;
+  margin-left: 0.3em;
+  pointer-events: none;
+  width: 4px;
+  height: 4px;
+  transform: rotate(45deg);
+  transition: all 0.15s ease 0s;
+  vertical-align: middle;
+  position: relative;
+  right: 0px;
+}
+
+.link-btn:hover::after {
+  color: rgb(18, 146, 238);
+  right: -0.3em;
+}

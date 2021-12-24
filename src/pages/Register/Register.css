@@ -1,0 +1,209 @@
+.register-wrapper {
+  position: relative;
+
+  background-image: linear-gradient(
+    180deg,
+    #f2f6ff 0,
+    #f2f6ff 523px,
+    #fff 523px,
+    #fff 100%
+  );
+}
+
+.register-form-wrapper {
+  padding: 40px 60px 50px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 4%) 0px 2px 8px, rgb(99 116 134 / 3%) 0px 5px 8px;
+
+  width: 100%;
+  max-width: 603px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.register-image-1 {
+  position: absolute;
+  bottom: -35px;
+  height: 273px;
+  left: -26%;
+  width: 221px;
+}
+
+.register-image-1 svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.register-books-img {
+  position: absolute;
+  bottom: -19px;
+  left: 95%;
+  height: 50px;
+  width: 102px;
+}
+
+.free-trial-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.free-trial-box > li {
+  position: relative;
+
+  list-style-image: url(https://dhmmnd775wlnp.cloudfront.net/d1e0a2e424/images/signup/icon-check-plus.svg);
+  list-style-position: outside;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2rem;
+}
+
+.register-form > div:not(:nth-child(1), :nth-child(2)) {
+  grid-column: 1/-1;
+}
+
+.containerClass .form-control {
+  width: 100% !important;
+
+  box-sizing: border-box;
+  font-size: 14px !important;
+  height: 40px !important;
+  line-height: 40px;
+  margin-bottom: 0;
+  width: 100%;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  background-color: #fff;
+  border: 1px solid #c5ced6;
+  border-radius: 3px;
+  color: #314351;
+  display: inline-block;
+  font-weight: 400;
+  outline: none;
+  margin-bottom: 0.5rem;
+
+  padding-left: 60px !important;
+}
+
+.containerClass .selected-flag {
+  width: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.flag {
+  margin-left: -10px;
+}
+.arrow {
+  border: none !important;
+  width: 6px !important;
+  height: 6px !important;
+  margin-top: -4px !important;
+  left: 22px !important;
+  transform: rotate(45deg);
+  border-bottom: 2px solid var(--gray) !important;
+  border-right: 2px solid var(--gray) !important;
+}
+
+.arrow.up {
+  transform: rotate(225deg);
+}
+
+.flag-dropdown {
+  background-color: transparent !important;
+  border-right: 0 !important;
+}
+
+.react-tel-input .country-list .flag {
+  margin-right: 17px;
+  margin-top: 2px;
+  display: block;
+  margin-left: 10px;
+}
+
+.register-btn {
+  height: 54px;
+  width: 100%;
+  background: rgb(18, 146, 238);
+  border-color: rgb(18, 146, 238);
+  color: white;
+  font-weight: 500;
+  border-radius: 3px;
+  display: block;
+  grid-column: 1/-1;
+}
+
+.register-btn:hover {
+  background: rgb(0, 119, 204);
+  border-color: rgb(0, 119, 204);
+}
+
+.register-terms a {
+  border-bottom: 1px solid rgb(213, 220, 225);
+  transition: border 0.2s ease-in 0s;
+}
+
+.register-terms a:hover {
+  border-color: rgb(147, 161, 176);
+  color: rgb(49, 67, 81);
+}
+
+.register-form-brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form-brands img {
+  width: 150px;
+}
+
+@media (max-width: 1000px) {
+  .register-image-1,
+  .register-books-img {
+    display: none;
+  }
+
+  .register-wrapper {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#f2f6ff),
+      to(#f2f6ff)
+    );
+    background-color: #f2f6ff;
+  }
+}
+
+@media (max-width: 760px) {
+  .register-form-footer {
+    display: none;
+  }
+
+  .register-form > div:not(:nth-child(1), :nth-child(2)) {
+    grid-column: 1/-1;
+  }
+  .register-form > div {
+    grid-column: 1/-1;
+  }
+
+  .register-form-wrapper {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .free-trial-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

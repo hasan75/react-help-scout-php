@@ -1,0 +1,18 @@
+.resources-card {
+  display: block;
+}
+
+.resources-card-img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.resources-card-img img {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.resources-card:hover img {
+  transform: scale(1.02);
+}
